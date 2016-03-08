@@ -31,9 +31,9 @@
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
-			this.qualBest = new System.Windows.Forms.RadioButton();
-			this.qualLow = new System.Windows.Forms.RadioButton();
 			this.qualAudio = new System.Windows.Forms.RadioButton();
+			this.qualLow = new System.Windows.Forms.RadioButton();
+			this.qualBest = new System.Windows.Forms.RadioButton();
 			this.button1 = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -66,6 +66,28 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Quality";
 			// 
+			// qualAudio
+			// 
+			this.qualAudio.AutoSize = true;
+			this.qualAudio.Location = new System.Drawing.Point(6, 65);
+			this.qualAudio.Name = "qualAudio";
+			this.qualAudio.Size = new System.Drawing.Size(74, 17);
+			this.qualAudio.TabIndex = 2;
+			this.qualAudio.TabStop = true;
+			this.qualAudio.Text = "Audio only";
+			this.qualAudio.UseVisualStyleBackColor = true;
+			// 
+			// qualLow
+			// 
+			this.qualLow.AutoSize = true;
+			this.qualLow.Location = new System.Drawing.Point(6, 42);
+			this.qualLow.Name = "qualLow";
+			this.qualLow.Size = new System.Drawing.Size(49, 17);
+			this.qualLow.TabIndex = 1;
+			this.qualLow.TabStop = true;
+			this.qualLow.Text = "360p";
+			this.qualLow.UseVisualStyleBackColor = true;
+			// 
 			// qualBest
 			// 
 			this.qualBest.AutoSize = true;
@@ -77,28 +99,6 @@
 			this.qualBest.TabStop = true;
 			this.qualBest.Text = "Best";
 			this.qualBest.UseVisualStyleBackColor = true;
-			// 
-			// qualLow
-			// 
-			this.qualLow.AutoSize = true;
-			this.qualLow.Location = new System.Drawing.Point(6, 42);
-			this.qualLow.Name = "qualLow";
-			this.qualLow.Size = new System.Drawing.Size(45, 17);
-			this.qualLow.TabIndex = 1;
-			this.qualLow.TabStop = true;
-			this.qualLow.Text = "Low";
-			this.qualLow.UseVisualStyleBackColor = true;
-			// 
-			// qualAudio
-			// 
-			this.qualAudio.AutoSize = true;
-			this.qualAudio.Location = new System.Drawing.Point(6, 65);
-			this.qualAudio.Name = "qualAudio";
-			this.qualAudio.Size = new System.Drawing.Size(74, 17);
-			this.qualAudio.TabIndex = 2;
-			this.qualAudio.TabStop = true;
-			this.qualAudio.Text = "Audio only";
-			this.qualAudio.UseVisualStyleBackColor = true;
 			// 
 			// button1
 			// 
@@ -119,8 +119,10 @@
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.textBox1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "MPV/youtube-dl GUI";
+			this.Load += new System.EventHandler(this.Form1_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.ResumeLayout(false);

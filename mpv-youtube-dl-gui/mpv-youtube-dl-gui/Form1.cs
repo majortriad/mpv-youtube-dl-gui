@@ -18,6 +18,11 @@ namespace mpv_youtube_dl_gui
 			InitializeComponent();
 		}
 
+		private void Form1_Load (object sender, EventArgs e)
+		{
+			textBox1.Text = Clipboard.GetText();
+		}
+
 		private void button1_Click (object sender, EventArgs e)
 		{
 			string url = textBox1.Text;
@@ -36,5 +41,6 @@ namespace mpv_youtube_dl_gui
 			string command = "/K mpv " + url + " --ytdl-format=" + quality;
 			System.Diagnostics.Process.Start("CMD.exe", command);
 		}
+
 	}
 }
